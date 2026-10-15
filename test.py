@@ -19,7 +19,6 @@ while True:
     latency = (time.perf_counter() - t0) * 1000  # ms: dari frame masuk sampai hasil jadi
 
     annotated = result.plot()
-
     # FPS dirata-rata supaya angkanya tidak loncat-loncat
     now = time.perf_counter()
     fps = 0.9 * fps + 0.1 * (1 / (now - prev)) if fps else 1 / (now - prev)
